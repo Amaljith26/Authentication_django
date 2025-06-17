@@ -7,7 +7,7 @@ urlpatterns = [
     path('upload/', upload_image, name='upload-image'),
     path('view/', view_images, name='view-images'),
     path('login/', auth_views.LoginView.as_view(template_name='gallery/login.html'), name='login'),
-    path('Logout/', auth_views.LogoutView.as_view(), name='logout'),
+    path('logout/', auth_views.LogoutView.as_view(), name='logout'),
     re_path(r'^protected-media/(?P<path>.*)$', protected_media, name='protected-media'),
     
 ]

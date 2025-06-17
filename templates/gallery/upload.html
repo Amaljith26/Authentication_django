@@ -23,8 +23,12 @@
                         </form>
                         <hr>
                         <div class="text-center">
-                            <a href="{% url 'view-images' %}" class="btn btn-outline-secondary btn-sm">View Images</a>
-                            <a href="{% url 'logout' %}" class="btn btn-outline-danger btn-sm">Logout</a>
+                            <a href="{% url 'view-images' %}" class="btn btn-outline-secondary btn-sm me-2">View Images</a>
+
+                            <form method="post" action="{% url 'logout' %}" style="display: inline;">
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-outline-danger btn-sm">Logout</button>
+                            </form>
                         </div>
                     </div>
                 </div>
